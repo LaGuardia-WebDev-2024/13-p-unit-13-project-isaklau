@@ -1,9 +1,9 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[ . ] Two Interactive Drop-down Inputs 
 [  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ . ] Add Five CSS Declarations
+[ . ] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -21,52 +21,121 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Isa</h1>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- Dance Question -->
+    <form id="dance-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        💃 What is my favorite dance style?
+        <select id="dance-answer">
+          <option value="dance1">Contemporary</option>
+          <option value="dance2">Ballet</option>
+          <option value="dance3">Modern</option>
+          <option value="dance4">Hip-Hop</option>
+          <option value="dance5">Salsa</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Dance Style Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="dance-result"></div>
+    <p>↓↓ HINT! ↓↓</p>
+    <img
+      class="dance-img"
+      src="https://cdn.glitch.global/dc6205f5-bf9b-44e2-b76d-b5ece05f12d5/49-IM6A9738_CR3.jpg?v=1746799453855"
+      width="0"
+      height="350"
+    />
+    <img
+      class="dance-img"
+      src="https://cdn.glitch.global/dc6205f5-bf9b-44e2-b76d-b5ece05f12d5/55-IM6A9841_CR3.jpg?v=1747058072869"
+      width="0"
+      height="350"
+    />
+    <img
+      class="dance-img"
+      src="https://cdn.glitch.global/dc6205f5-bf9b-44e2-b76d-b5ece05f12d5/50-IM6A9770_CR3.jpg?v=174705806971"
+      width="0"
+      height="350"
+    />
+    <p>Images courtesy of Layla Shoobridge (@laylamshoo)</p>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">
+            All the Lovers in the Night - Mieko Kawakami
+          </option>
+          <option value="book2">Crying in H-mart - Michelle Zauner</option>
+          <option value="book3">
+            Days at the Morisaki Bookshop - Satoshi Yagisawa
+          </option>
+          <option value="book4">All of the Above!</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+    <hr />
+    <!-- Coffee Question -->
+    <form id="coffee-form">
+      <label
+        >☕ Where do I often get coffee?
+        <select id="coffee-answer">
+          <option value="coffee1">Blank Street</option>
+          <option value="coffee2">Dunkin'</option>
+          <option value="coffee3">Cart Guy</option>
+          <option value="coffee4">Isa doesn't drink coffee!</option>
+        </select>
+      </label>
+      <button type="submit">Check Coffee Supplier Answer</button>
+    </form>
+    <div id="coffee-result"></div>
+    <hr />
+    <!-- Travel Question -->
+    <form id="travel-form">
+      <label
+        >✈️ Guess my favorite travel destination!
+        <select id="travel-answer">
+          <option value="travel1">London</option>
+          <option value="travel2">Japan</option>
+          <option value="travel3">Hong Kong</option>
+          <option value="travel4">Brazil</option>
+        </select>
+      </label>
+      <button type="submit">Check Travel Answer</button>
+    </form>
+    <div id="travel-result"></div>
+    <img
+      id="travel-img"
+      src="https://cdn.glitch.global/dc6205f5-bf9b-44e2-b76d-b5ece05f12d5/P1070529.JPG?v=1747144777515"
+      width="50%"
+      height="300"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //Dance Question jQuery Code
+      $("#dance-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#dance-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "dance1") {
+          $("#dance-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#dance-result").text("Try Again!");
         }
       });
+
+      $(".dance-img").animate(
+        {
+          width: "250",
+        },
+        3000
+      );
 
       //Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
@@ -75,12 +144,49 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book4") {
           $("#book-result").text("YESSSS!");
         } else {
           $("#book-result").text("Try Again!");
         }
       });
+
+      //Coffee Question jQuery Code
+      $("#coffee-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#coffee-answer");
+        var answer = $answer.val();
+
+        if (answer === "coffee3") {
+          $("#coffee-result").text("That's my guy :)");
+        }
+        if (answer === "coffee4") {
+          $("#coffee-result").text("That is NOT true.");
+        } else {
+          $("#coffee-result").text(
+            "I do have coffee from there, just not too often"
+          );
+        }
+      });
+
+      //Travel Question jQuery Code
+      $("#travel-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#travel-answer");
+        var answer = $answer.val();
+
+        if (answer === "travel2") {
+          $("#travel-result").text("Yay! You guessed right, I love Japan <3");
+        } else {
+          $("#travel-result").text("I actually haven't been there yet...");
+        }
+      });
+
+      var $pic = $("#travel-img");
+      $pic.hide();
+      $pic.slideDown(2000);
     </script>
   </body>
 

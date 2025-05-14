@@ -1,6 +1,21 @@
-#movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
+body {
+  background: rgb(196, 225, 246);
+  margin:auto;
+  width:50%;
+  text-align: center;
+  font-family: "Boogaloo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  color: rgb(254, 238, 145); 
+  background: rgb(255, 157, 61);
+}
+
+#dance-result {
+  background: rgb(254, 238, 145);
+  border: 5px solid rgb(255, 157, 61);
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -8,8 +23,26 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
+  background: rgb(254, 238, 145);
+  border: 5px solid rgb(255, 157, 61);
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#coffee-result {
+  background: rgb(254, 238, 145);
+  border: 5px solid rgb(255, 157, 61);
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#travel-result {
+  background: rgb(254, 238, 145);
+  border: 5px solid rgb(255, 157, 61);
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -18,5 +51,9 @@
 
 hr {
   height: 5px;
-  background-color: black;
+  background-color: rgb(255, 189, 115);
+}
+
+img{
+  border:5px solid rgb(167, 199, 231);
 }

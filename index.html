@@ -1,12 +1,12 @@
 <!-- Unit 13 Project
 Requirements
 [ . ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
+[ . ] Two Different jQuery Animation Methods 
 [ . ] Add Five CSS Declarations
 [ . ] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ yes ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
@@ -19,6 +19,13 @@ Select ONE Additional Feature to Add
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Encode+Sans+Semi+Condensed:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Quiz About Isa</h1>
@@ -32,7 +39,6 @@ Select ONE Additional Feature to Add
           <option value="dance2">Ballet</option>
           <option value="dance3">Modern</option>
           <option value="dance4">Hip-Hop</option>
-          <option value="dance5">Salsa</option>
         </select>
       </label>
       <button type="submit">Check Dance Style Answer</button>
@@ -126,7 +132,7 @@ Select ONE Additional Feature to Add
         if (answer === "dance1") {
           $("#dance-result").text("YESSSS!");
         } else {
-          $("#dance-result").text("Try Again!");
+          $("#dance-result").text("So close, try again!");
         }
       });
 
@@ -160,13 +166,13 @@ Select ONE Additional Feature to Add
 
         if (answer === "coffee3") {
           $("#coffee-result").text("That's my guy :)");
-        }
-        if (answer === "coffee4") {
-          $("#coffee-result").text("That is NOT true.");
         } else {
           $("#coffee-result").text(
             "I do have coffee from there, just not too often"
           );
+        }
+        if (answer === "coffee4") {
+          $("#coffee-result").text("That is NOT true.");
         }
       });
 
@@ -180,7 +186,7 @@ Select ONE Additional Feature to Add
         if (answer === "travel2") {
           $("#travel-result").text("Yay! You guessed right, I love Japan <3");
         } else {
-          $("#travel-result").text("I actually haven't been there yet...");
+          $("#travel-result").text("I actually haven't been there... yet...");
         }
       });
 
